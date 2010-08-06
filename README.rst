@@ -2,9 +2,11 @@
 hoppy
 ==============
 
-hoppy is a Python library for accessing the Hoptoad API.
-
 .. _Hoptoad: http://hoptoadapp.com/
+.. _Python: http://python.org/
+.. _restkit: http://benoitc.github.com/restkit/
+
+hoppy is a Python library for accessing the Hoptoad_ API.
 
 
 Requirements
@@ -13,9 +15,9 @@ Requirements
 hoppy requires:
 
 * Python_ 2.6
+* restkit_ >= 2.1.1
 * A Hoptoad_ account
 
-.. _Python: http://python.org/
 
 
 Installation
