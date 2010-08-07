@@ -44,14 +44,14 @@ Usage
 
 Use hoppy to notify Hoptoad of an app deploy::
 
-    import hoppy.api
-    hoppy.api.api_key = '<project API key>'
-    hoppy.api.Deploy().deploy('PRODUCTION', scm_revision='1a6a445',
+    import hoppy.deploy
+    hoppy.api_key = '<project API key>'
+    hoppy.deploy.Deploy().deploy('PRODUCTION', scm_revision='1a6a445',
             scm_repository='http://github.com/peplin/hoppy')
 
 Use hoppy to retreive a specific error::
 
-    import hoppy.api
-    hoppy.api.account = '<your account name>'
-    hoppy.api.auth_token = '<your personal API auth token>'
-    print hoppy.api.Error().find(2035230)
+    import hoppy.error
+    hoppy.account = '<your account name>'
+    hoppy.auth_token = '<your personal API auth token>'
+    print hoppy.error.Error().find(2035230).environment
