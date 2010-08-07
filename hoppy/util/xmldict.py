@@ -42,4 +42,4 @@ def xml_to_dict(root):
     if not isinstance(root, Document):
         raise TypeError, 'Expected ElementTree.Element or file path string'
 
-    return {root.nodeName: _xml_to_dict_helper(root)}
+    return _xml_to_dict_helper(root)

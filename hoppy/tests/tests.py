@@ -36,10 +36,5 @@ class HoptoadErrorTests(unittest.TestCase):
         hoppy.account = None
         e = hoppy.error.HoptoadError().find(203543)
 
-    def test_no_api_key(self):
-        hoppy.api_key = None
-        e = hoppy.error.HoptoadError().find(203543)
-
     def test_find(self):
         e = hoppy.error.HoptoadError().find(203543)
-        

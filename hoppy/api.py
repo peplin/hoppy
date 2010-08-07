@@ -2,13 +2,13 @@ from restkit import Resource
 from xml.dom.minidom import parseString
 
 from hoppy.util.xmldict import xml_to_dict
-from hoppy import account, auth_token
 
 class HoptoadApiError(Exception):
     pass
 
 class HoptoadResource(Resource):
     def __init__(self, use_ssl=False, data=None):
+        from hoppy import account, auth_token
         self.auth_token = auth_token
         self.account = account
         self.host = self.base_uri(use_ssl)

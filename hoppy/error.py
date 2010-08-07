@@ -10,4 +10,7 @@ class HoptoadError(HoptoadResource):
 
     def request(self, *args, **kwargs):
         response = super(HoptoadError, self).request(*args, **kwargs)
-        return HoptoadError(response)
+        return HoptoadError(data=response)
+
+    def from_dict(self, data):
+        super(HoptoadError, self).from_dict(data['group'])

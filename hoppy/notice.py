@@ -10,4 +10,4 @@ class HoptoadNotice(HoptoadResource):
 
     def request(self, *args, **kwargs):
         response = super(HoptoadNotice, self).request(*args, **kwargs)
-        return HoptoadNotice(response)
+        return HoptoadNotice(data=response)
