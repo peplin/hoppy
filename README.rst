@@ -19,6 +19,17 @@ hoppy requires:
 * A Hoptoad_ account
 
 
+Development Requirements
+------------
+
+.. _nosetests: http://somethingaboutorange.com/mrl/projects/nose/0.11.2/
+.. _mockito-python: http://code.google.com/p/mockito-python/
+
+The hoppy test suite requires:
+
+* nosetests_ >= 0.11.2
+* mockito-python_ >= 0.6.10
+
 
 Installation
 ------------
