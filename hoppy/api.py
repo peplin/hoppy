@@ -39,4 +39,5 @@ class HoptoadResource(Resource):
 
     def from_dict(self, data):
         for key, value in data.iteritems():
-            setattr(self, key, value)
+            safe_key = key.replace('-', '_')
+            setattr(self, safe_key, value)
