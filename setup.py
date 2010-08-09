@@ -1,9 +1,9 @@
 import os
 from setuptools import setup, find_packages
 
-ROOT_PATH = os.path.abspath(os.path.dirname(__file__)
+ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-execfile(os.path.join(ROOT_PATH, 'hoppy/version.py')
+execfile(os.path.join(ROOT_PATH, 'hoppy/version.py'))
 long_description = open(os.path.join(ROOT_PATH, 'README.rst')).read()
 
 classifiers = [
