@@ -1,4 +1,3 @@
-
 hoppy
 ==============
 
@@ -20,7 +19,7 @@ hoppy requires:
 
 
 Development Requirements
-------------
+-------------------------
 
 .. _nosetests: http://somethingaboutorange.com/mrl/projects/nose/0.11.2/
 .. _mockito-python: http://code.google.com/p/mockito-python/
