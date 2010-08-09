@@ -46,8 +46,8 @@ Use hoppy to notify Hoptoad of an app deploy::
 
     import hoppy.deploy
     hoppy.api_key = '<project API key>'
-    hoppy.deploy.Deploy().deploy('PRODUCTION', scm_revision='1a6a445',
-            scm_repository='http://github.com/peplin/hoppy')
+    hoppy.deploy.Deploy().deploy(env='PRODUCTION', scm_revision='1a6a445',
+            scm_repository='git@github.com:peplin/hoppy.git')
 
 Use hoppy to retreive a specific error::
 
