@@ -23,7 +23,6 @@ setup(name='hoppy',
       license='MIT',
       classifiers=classifiers,
       url='http://github.com/peplin/hoppy',
-      packages=find_packages()
+      packages=find_packages(),
+      install_requires=['restkit>=2.1.1']
 )
-
-
