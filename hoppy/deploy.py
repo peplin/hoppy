@@ -1,11 +1,10 @@
-from restkit import Resource
+from hoppy.api import HoptoadResource
 
-from hoppy import api_key
-
-class Deploy(Resource):
+class Deploy(HoptoadResource):
     def __init__(self, use_ssl=False):
+        from hoppy import api_key
         self.api_key = api_key
-        super(Deploy, self).__init__(self.host, follow_redirect=True)
+        super(Deploy, self).__init__(use_ssl)
 
     def check_configuration(self):
         if not self.api_key:
@@ -14,7 +13,7 @@ class Deploy(Resource):
     def request(self, *args, **kwargs):
         response = super(Deploy, self).request(
                 api_key=self.api_key, *args, **kwargs)
-        return response.body_string()
+        return response
 
     def base_uri(self, use_ssl=False):
         base = 'http://hoptoadapp.com/deploys.txt'
@@ -29,6 +28,6 @@ class Deploy(Resource):
         """
         params = {}
         params['deploy[rails_env]'] = env
-        for key, value in kwargs:
+        for key, value in kwargs.iteritems():
             params['deploy[%s]' % key] = value
         return self.post(**params)
